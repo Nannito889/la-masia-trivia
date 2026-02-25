@@ -68,6 +68,8 @@ export function renderQuestions(container, { navigate, showToast }) {
       // Delete buttons
       listEl.querySelectorAll('.btn-delete').forEach(btn => {
         btn.addEventListener('click', async () => {
+          if (!confirm('¿Estás seguro de que quieres eliminar esta pregunta?')) return;
+
           const id = btn.dataset.id;
           try {
             await fetch(`${API_URL}/questions/${id}`, { method: 'DELETE' });
