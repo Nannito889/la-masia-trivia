@@ -195,6 +195,7 @@ export function renderQuestions(container, { navigate, showToast }) {
     container.querySelector('#btn-back').addEventListener('click', () => navigate('dashboard'));
 
     // Initial load
+    loadQuestions();
   });
 }
 
