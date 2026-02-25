@@ -77,4 +77,5 @@ export function renderLogin(container, { navigate, state, showToast }) {
     });
 
     userInput.focus();
-  }
+  });
+}
